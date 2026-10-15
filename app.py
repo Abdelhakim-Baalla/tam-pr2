@@ -460,4 +460,4 @@ def imports():return render_template('imports.html',batches=ImportBatch.query.fi
 @app.route('/health')
 def health():return {'status':'ok'}
 
-if __name__=='__main__':app.run(debug=os.getenv('FLASK_DEBUG')=='1',port=int(os.getenv('PORT',5000)))
+if __name__=='__main__':app.run(host='0.0.0.0',debug=os.getenv('FLASK_DEBUG')=='1',port=int(os.getenv('PORT',8080)))
